@@ -1,0 +1,24 @@
+{
+  "name": "api-escorts",
+  "version": "1.0.0",
+  "description": "Api para escorts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-promise-router": "^2.0.0",
+    "mongojs": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
