@@ -1,0 +1,198 @@
+<div class="container-fluid">
+
+  <p class="display-1 text-center">
+    escorts works!
+  </p>
+
+
+      <form (submit)="addEscorts($event)" class="mb-3">
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="Name" name="Name" class="form-control" placeholder="Add Name">
+          </div>
+        <div class="col-md-4 mb-3">
+            <label for="name">Last Name</label>
+            <input type="text" [(ngModel)]="LastName" name="LastName" class="form-control" placeholder="Add Last Name">
+        </div>
+      </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="name">NickName</label>
+            <input type="text" [(ngModel)]="NickName" name="NickName" class="form-control" placeholder="Add NickName">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="name">Age</label>
+            <input type="text" [(ngModel)]="Age" name="Age" class="form-control" placeholder="Add Age">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="name">BornDate</label>
+            <input type="date" [(ngModel)]="BornDate" name="BornDate" class="form-control" placeholder="Add BornDate">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="name">Telephone</label>
+            <input type="text" [(ngModel)]="Telephone" name="Telephone" class="form-control" placeholder="Add Telephone">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationServer03">Residence:</label>
+          <input type="text" [(ngModel)]="Residence" name="Residence" id="validationServer03" class="form-control is-invalid" placeholder="Add Residence" required>
+            <div class="invalid-feedback">Please provide a valid city.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="name">Nationality:</label>
+          <input type="text" [(ngModel)]="Nationality" name="Nationality" class="form-control" placeholder="Add Nationality">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="name">Profession:</label>
+            <input type="text" [(ngModel)]="Profession" name="Profession" class="form-control mb-1" placeholder="Add Profession">
+            <label for="exampleFormControlSelect1">Stature:</label>
+            <input type="text" [(ngModel)]="Stature" name="Stature" class="form-control" placeholder="Add Stature">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="exampleFormControlSelect1">Languages:</label>
+            <select multiple class="form-control" [(ngModel)]="Languages" name="Languages">
+              <option>English</option>
+              <option>Spanish</option>
+              <option>Portuguese</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="example">Measurements:</label>
+            <input type="text" [(ngModel)]="Meausurements" name="Meausurements" class="form-control" placeholder="Add Measurements">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="exampleFormControlSelect1">Cost Per Hour:</label>
+          <input type="money" [(ngModel)]="CostPerHour" name="CostPerHour" class="form-control" placeholder="Add Cost Per Hour">
+          </div>
+        </div>
+
+        <div class="form-row was-validated">
+          <div class="col-md-3 mb-3">
+            <label for="exampleFormControlSelect1">Hotels</label>
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" [(ngModel)]="Hotels" name="Hotels" class="custom-control-input" id="customControlValidation1" required>
+              <label class="custom-control-label" for="customControlValidation1">Check this to confirm</label>
+              <div class="invalid-feedback">Example invalid feedback text</div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="exampleFormControlSelect4">Departaments:</label>
+            <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox"  [(ngModel)]="Departaments" name="Departaments" class="custom-control-input" id="customControlValidation2" required>
+            <label class="custom-control-label" for="customControlValidation2">Check this to confirm</label>
+            <div class="invalid-feedback">Example invalid feedback text</div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="exampleFormControlSelect5">Travels:</label>
+            <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" [(ngModel)]="Travels" name="Travels"  class="custom-control-input" id="customControlValidation5" required>
+            <label class="custom-control-label" for="customControlValidation5">Check this to confirm</label>
+            <div class="invalid-feedback">Example invalid feedback text</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="exampleFormControlSelect5">Agency Name:</label>
+            <input type="text" [(ngModel)]="AgencyName" name="AgencyName" class="form-control" placeholder="Add AgencyName">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="exampleFormControlSelect1">Agency URL:</label>
+            <input type="text" [(ngModel)]="AgencyUrl" name="AgencyUrl" class="form-control" placeholder="http://yousiter.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="exampleFormControlSelect2">Services:</label>
+            <select multiple class="form-control" [(ngModel)]="Services" name="Services">
+              <option *ngFor= "let modelo of modelos" >{{modelo.Services}}</option>
+            </select>
+          </div>
+          <div class="col-md-2 mt-5">
+            <div class="card">
+              <div class="card-body">
+                  <span class="input-group-addon">
+                      <button type="submit" class="btn btn-primary">Add Escort</button>
+                      <button type="submit" class="btn btn-success">Update Escort</button>
+                  </span>
+              </div>
+            </div>
+         </div>
+       </div>
+  </form>
+
+<div class="table-responsive-sm">
+  <table class="table table-sm table-hover table-bordered table-light">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">LastName</th>
+        <th scope="col">NickName</th>
+        <th scope="col">Age</th>
+        <th scope="col">BornDate</th>
+        <th scope="col">Telephone</th>
+        <th scope="col">Residence</th>
+        <th scope="col">Nationality</th>
+        <th scope="col">Profession</th>
+        <th scope="col">Languages</th>
+        <th scope="col">Stature</th>
+        <th scope="col">Meausurements</th>
+        <th scope="col">CostperHour</th>
+        <th scope="col">Hotels</th>
+        <th scope="col">Departaments</th>
+        <th scope="col">Travels</th>
+        <th scope="col">AgencyName</th>
+        <th scope="col">AgencyURL</th>
+        <th scope="col">Services</th>
+        <th scope="col">Control</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let Modelos of modelos">
+        <td >{{Modelos.Name}}</td>
+        <td><span class="d-inline-block text-truncate" style="max-width: 100px;">{{Modelos.LastName}}</span></td>
+        <td> {{Modelos.NickName}}</td>
+        <td>{{Modelos.Age}}</td>
+        <td><span class="d-inline-block text-truncate" style="max-width: 100px;">{{Modelos.BornDate}}</span></td>
+        <td>{{Modelos.Telephone}}</td>
+        <td>{{Modelos.Residence}}</td>
+        <td>{{Modelos.Nationality}}</td>
+        <td>{{Modelos.Profession}}</td>
+        <td><span class="d-inline-block text-truncate" style="max-width: 100px;">{{Modelos.Languages}}</span></td>
+        <td>{{Modelos.Stature}}</td>
+        <td>{{Modelos.Meausurements}}</td>
+        <td>{{Modelos.CostPerHour}}</td>
+        <td>{{Modelos.Hotels}}</td>
+        <td>{{Modelos.Departaments}}</td>
+        <td>{{Modelos.Travels}}</td>
+        <td><span class="d-inline-block text-truncate" style="max-width: 100px;">{{Modelos.AgencyName}}</span></td>
+        <td><span class="d-inline-block text-truncate" style="max-width: 100px;">{{Modelos.AgencyUrl}}</span></td>
+        <td><span class="d-inline-block text-truncate" style="max-width: 80px;">{{Modelos.Services}}</span></td>
+        <td>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-link btn-sm"  data-toggle="modal" (click)="ver(miModal)"><i class="fa fa-user-plus fa-fx text-primary"></i></button>
+            <button type="button" class="btn btn-link btn-sm"  (click)="deleteEscorts"><i class="fa fa-user-times fa-fx text-danger"></i></button>
+            <button type="button" class="btn btn-link btn-sm"  (click)="updateEscorts"><i class="fa fa-pencil fa-fx text-success"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
